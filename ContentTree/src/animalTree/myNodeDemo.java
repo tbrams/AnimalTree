@@ -13,8 +13,8 @@ public class myNodeDemo {
 	  	    // Initialize
 	  	    myNode  node, node1;
 	  	    node = new myNode();
-	  	    node1= new myNode("En due");
-	  	    node.setQuestion("Tænker du på et dyr");
+	  	    node1= new myNode("A pigeon");
+	  	    node.setQuestion("Please imagine an animal.\nAre you ready");
 	  	    node.yes = node1;
 	  	    
 	  	    myNode root = node;
@@ -35,7 +35,7 @@ public class myNodeDemo {
 			   }
 			
 	  	       // do we have a solution?
-               if (Helper.reply("Er det " + node.What())=='Y') {
+               if (Helper.reply("Is it " + node.What())=='Y') {
                    // got it then exit and that is it...                	
     	  	       System.out.println("I knew it!\n:-)");
     	  	       overAndOut = true;
@@ -49,7 +49,7 @@ public class myNodeDemo {
                
     	  	   	System.out.println("What is it then? ");
                 String newItem = linereader.nextLine(); 
-    	     	System.out.println("Give me a question to tell the difference between "+node.What()+" and "+newItem+"? ");
+    	     	System.out.println("Give me a question that will enable me to tell the difference between "+node.What()+" and "+newItem+"? ");
                 String newQuestion = linereader.nextLine(); 
                 char branch=Helper.reply("And what is the answer for "+newItem);
                 
