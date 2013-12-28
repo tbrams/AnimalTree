@@ -18,10 +18,9 @@ public class myNodeDemo {
 	  	    node.yes = node1;
 	  	    
 	  	    myNode root = node;
-	  	    boolean overAndOut = false;
-	  	    while (!overAndOut) {
+	  	    while (true) {
  			   while (!node.isLeaf()) {
-                   if (Helper.reply(node.Question())=='Y') {
+                   if (Helper.replyYesNo(node.Question())=='Y') {
                  	  if (node.yes!=null) 
                 		  node = node.yes;
                 	  else
@@ -35,10 +34,9 @@ public class myNodeDemo {
 			   }
 			
 	  	       // do we have a solution?
-               if (Helper.reply("Is it " + node.What())=='Y') {
+               if (Helper.replyYesNo("Is it " + node.What())=='Y') {
                    // got it then exit and that is it...                	
     	  	       System.out.println("I knew it!\n:-)");
-    	  	       overAndOut = true;
                    break;
                 }
                
@@ -51,7 +49,7 @@ public class myNodeDemo {
                 String newItem = linereader.nextLine(); 
     	     	System.out.println("Give me a question that will enable me to tell the difference between "+node.What()+" and "+newItem+"? ");
                 String newQuestion = linereader.nextLine(); 
-                char branch=Helper.reply("And what is the answer for "+newItem);
+                char branch=Helper.replyYesNo("And what is the answer for "+newItem);
                 
                 myNode newINode1 = new myNode(node.What());
                 myNode newINode2 = new myNode(newItem);
