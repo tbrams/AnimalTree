@@ -34,13 +34,19 @@ public class myNodeDemo {
 			   }
 			
 	  	       // do we have a solution?
-               if (Helper.replyYesNo("Is it " + node.What())=='Y') {
-                   // got it then exit and that is it...                	
-    	  	       System.out.println("I knew it!\n:-)");
+               if (!node.hasItem()) {
+ 	     	       System.out.println("OK.\nBye bye:-)");
                    break;
-                }
+               }
+               else
+    			   if (Helper.replyYesNo("Is it " + node.What())=='Y') {
+                       // got it then exit and that is it...                	
+     	     	       System.out.println("I knew it!\n:-)");
+                       break;
+                    }
                
-               	// this is a new item - make room with two new nodes
+    			   
+               // this is a new item - make room with two new nodes
                // 1. Current Node will become new Question node
                // 2. Create new item node 1 for old item
                // 3. Create new item node 2 for new item

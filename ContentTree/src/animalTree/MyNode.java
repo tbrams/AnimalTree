@@ -15,7 +15,7 @@ public class MyNode {
 			  }
 			  
 			  myNode() {
-				 this.item = "Default...";
+				 this.item = null;
 				 this.question = null;
 				 this.yes = null;
 				 this.no=null;
@@ -35,6 +35,9 @@ public class MyNode {
 			  
 			  boolean isLeaf() {
 				  return (this.question==null);
+			  }
+			  boolean hasItem() {
+				  return (this.item!=null);
 			  }
 			  
 			  void ClearItem() {
