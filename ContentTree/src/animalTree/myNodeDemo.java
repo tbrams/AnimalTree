@@ -1,7 +1,6 @@
 package animalTree;
 
 import java.util.*;
-import java.io.*;
 import animalTree.MyNode.myNode;
 
 public class myNodeDemo {
