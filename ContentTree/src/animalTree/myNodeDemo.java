@@ -2,6 +2,7 @@ package animalTree;
 
 import java.util.*;
 import java.io.*;
+
 import animalTree.MyNode.myNode;
 
 public class myNodeDemo {
@@ -36,7 +37,9 @@ public class myNodeDemo {
 	  	       // do we have a solution?
                if (!node.hasItem()) {
  	     	       System.out.println("OK.\nBye bye:-)");
-                   break;
+ 	     	       System.out.println("\n\nData tree dump:\n");
+		           node.dumpAll();
+ 	     	       break;
                }
                else
     			   if (Helper.replyYesNo("Is it " + node.What())=='Y') {
